@@ -1,157 +1,57 @@
 <!DOCTYPE html>
-<html lang="hy">
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KIA Service</title>
-
+<title>Kia Service</title>
 <style>
-
 body{
-margin:0;
-font-family:Arial;
-background:#111;
-color:white;
+  margin:0;
+  font-family:Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background: url('https://media.ed.edmunds-media.com/kia/forte/2022/oem/2022_kia_forte_sedan_gt_fq_oem_4_1280x855.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color:white;
+  text-align:center;
 }
-
-header{
-background:black;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+h1{
+  font-size:60px;
+  font-family:'Segoe UI', Arial, sans-serif;
+  text-shadow: 2px 2px 16px #000, 0 0 8px #fff;
+  letter-spacing: 2px;
 }
-
-.logo{
-font-size:28px;
-color:#ff2b2b;
-font-weight:bold;
+p{
+  font-size:20px;
+  color:#ccc;
 }
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
+.coming-soon-box {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 40px 60px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  margin-top: 40px;
+  animation: slideIn 1.2s ease-out;
 }
-
-.hero{
-height:500px;
-background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
-background-size:cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-.hero h1{
-font-size:60px;
-background:rgba(0,0,0,0.6);
-padding:20px;
-}
-
-.services{
-padding:60px 20px;
-text-align:center;
-}
-
-.services h2{
-font-size:40px;
-margin-bottom:40px;
-}
-
-.service-box{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.box{
-background:#222;
-padding:30px;
-width:250px;
-border-radius:10px;
-}
-
-.contact{
-background:#000;
-padding:60px 20px;
-text-align:center;
-}
-
-footer{
-background:#000;
-padding:20px;
-text-align:center;
-}
-
 </style>
-
 </head>
-
 <body>
-
-<header>
-
-<div class="logo">KIA SERVICE</div>
-
-<nav>
-<a href="#">Գլխավոր</a>
-<a href="#">Ծառայություններ</a>
-<a href="#">Կոնտակտ</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>KIA Մեքենաների Սպասարկում</h1>
-
-</section>
-
-<section class="services">
-
-<h2>Մեր Ծառայությունները</h2>
-
-<div class="service-box">
-
-<div class="box">
-<h3>Շարժիչի վերանորոգում</h3>
-<p>Բարձրորակ շարժիչի սպասարկում</p>
+<div class="coming-soon-box">
+  <h1>COMING SOON</h1>
+  <p style="font-size:24px;color:#fff;margin-bottom:10px;">Kia Service Website is Coming Soon</p>
+  <p style="font-size:18px;color:#eee;">kiaservice.am</p>
+  <p style="font-size:28px;color:#fff;font-weight:bold;margin-top:20px;text-shadow:0 0 12px #fff, 0 0 4px #ffd700;">📞 +37493777740</p>
 </div>
-
-<div class="box">
-<h3>Դիագնոստիկա</h3>
-<p>Կատարում ենք ամբողջական համակարգչային ստուգում</p>
-</div>
-
-<div class="box">
-<h3>Յուղի փոփոխություն</h3>
-<p>Օրիգինալ յուղ և ֆիլտրեր</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="contact">
-
-<h2>Կապ մեզ հետ</h2>
-
-<p>📞 +374 00 00 00</p>
-<p>📍 Երևան</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 KIA Service</p>
-
-</footer>
-
 </body>
-
 </html>
