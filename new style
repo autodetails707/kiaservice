@@ -1,0 +1,399 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 688fb336cda1e3d54ab8bb271515c8f2d10eebcb..256cf5637586adcc10552f408b19348d46159ff5 100644
+--- a/index.html
++++ b/index.html
+@@ -1,57 +1,333 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-<meta charset="UTF-8">
+-<title>Kia Service</title>
+-<style>
+-body{
+-  margin:0;
+-  font-family:Arial;
+-  display:flex;
+-  justify-content:center;
+-  align-items:center;
+-  height:100vh;
+-  background: url('https://media.ed.edmunds-media.com/kia/forte/2022/oem/2022_kia_forte_sedan_gt_fq_oem_4_1280x855.jpg') no-repeat center center fixed;
+-  background-size: cover;
+-  color:white;
+-  text-align:center;
+-}
+-h1{
+-  font-size:60px;
+-  font-family:'Segoe UI', Arial, sans-serif;
+-  text-shadow: 2px 2px 16px #000, 0 0 8px #fff;
+-  letter-spacing: 2px;
+-}
+-p{
+-  font-size:20px;
+-  color:#ccc;
+-}
+-.coming-soon-box {
+-  background: rgba(0, 0, 0, 0.6);
+-  border-radius: 20px;
+-  padding: 40px 60px;
+-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+-  margin-top: 40px;
+-  animation: slideIn 1.2s ease-out;
+-}
+-@keyframes slideIn {
+-  0% {
+-    opacity: 0;
+-    transform: translateY(-80px);
+-  }
+-  100% {
+-    opacity: 1;
+-    transform: translateY(0);
+-  }
+-}
+-</style>
+-</head>
+-<body>
+-<div class="coming-soon-box">
+-  <h1>COMING SOON</h1>
+-  <p style="font-size:24px;color:#fff;margin-bottom:10px;">Kia Service Website is Coming Soon</p>
+-  <p style="font-size:18px;color:#eee;">kiaservice.am</p>
+-  <p style="font-size:28px;color:#fff;font-weight:bold;margin-top:20px;text-shadow:0 0 12px #fff, 0 0 4px #ffd700;">📞 +37493777740</p>
+-</div>
+-</body>
+-</html>
++<!DOCTYPE html>
++<html lang="hy">
++<head>
++  <meta charset="UTF-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>Kia Service Armenia</title>
++  <style>
++    :root {
++      --bg: #0b0d10;
++      --card: #14181f;
++      --text: #f5f7fb;
++      --muted: #a9b2bf;
++      --accent: #d91f26;
++      --line: #232a35;
++    }
++
++    * {
++      box-sizing: border-box;
++    }
++
++    body {
++      margin: 0;
++      font-family: "Segoe UI", Arial, sans-serif;
++      color: var(--text);
++      background: radial-gradient(circle at 20% 0%, #1a212d, var(--bg) 50%);
++      line-height: 1.5;
++    }
++
++    .container {
++      width: min(1140px, 92%);
++      margin: 0 auto;
++    }
++
++    header {
++      position: sticky;
++      top: 0;
++      z-index: 20;
++      backdrop-filter: blur(10px);
++      background: rgba(8, 11, 16, 0.8);
++      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
++    }
++
++    .nav {
++      display: flex;
++      align-items: center;
++      justify-content: space-between;
++      min-height: 72px;
++      gap: 24px;
++    }
++
++    .logo {
++      font-size: 26px;
++      font-weight: 800;
++      letter-spacing: 1px;
++      text-transform: uppercase;
++    }
++
++    .logo span {
++      color: var(--accent);
++    }
++
++    .nav-links {
++      display: flex;
++      gap: 20px;
++      flex-wrap: wrap;
++    }
++
++    .nav-links a {
++      color: var(--muted);
++      text-decoration: none;
++      font-size: 14px;
++      text-transform: uppercase;
++      letter-spacing: 0.8px;
++      transition: color 0.2s ease;
++    }
++
++    .nav-links a:hover {
++      color: #fff;
++    }
++
++    .cta {
++      background: var(--accent);
++      color: #fff;
++      padding: 10px 18px;
++      border-radius: 999px;
++      text-decoration: none;
++      font-weight: 600;
++      font-size: 14px;
++      transition: transform 0.2s ease, box-shadow 0.2s ease;
++    }
++
++    .cta:hover {
++      transform: translateY(-1px);
++      box-shadow: 0 8px 24px rgba(217, 31, 38, 0.35);
++    }
++
++    .hero {
++      padding: 70px 0 48px;
++    }
++
++    .hero-grid {
++      display: grid;
++      grid-template-columns: 1.1fr 1fr;
++      align-items: center;
++      gap: 40px;
++    }
++
++    .badge {
++      display: inline-flex;
++      align-items: center;
++      gap: 8px;
++      border: 1px solid rgba(255, 255, 255, 0.12);
++      border-radius: 999px;
++      padding: 6px 14px;
++      color: #dce2ea;
++      font-size: 12px;
++      text-transform: uppercase;
++      letter-spacing: 1px;
++    }
++
++    h1 {
++      margin: 16px 0;
++      font-size: clamp(34px, 5vw, 56px);
++      line-height: 1.1;
++      letter-spacing: -0.02em;
++    }
++
++    .lead {
++      color: var(--muted);
++      font-size: 18px;
++      max-width: 580px;
++    }
++
++    .hero-actions {
++      display: flex;
++      gap: 12px;
++      margin-top: 26px;
++      flex-wrap: wrap;
++    }
++
++    .btn-secondary {
++      border: 1px solid rgba(255, 255, 255, 0.22);
++      color: #fff;
++      text-decoration: none;
++      padding: 10px 18px;
++      border-radius: 999px;
++      font-weight: 600;
++      font-size: 14px;
++    }
++
++    .hero-image {
++      border-radius: 20px;
++      overflow: hidden;
++      border: 1px solid rgba(255, 255, 255, 0.12);
++      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
++      min-height: 360px;
++      background: url("https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
++    }
++
++    section {
++      padding: 28px 0 56px;
++    }
++
++    .section-title {
++      margin-bottom: 18px;
++      font-size: 28px;
++    }
++
++    .cards {
++      display: grid;
++      grid-template-columns: repeat(3, 1fr);
++      gap: 16px;
++    }
++
++    .card {
++      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
++      border: 1px solid var(--line);
++      border-radius: 16px;
++      padding: 20px;
++    }
++
++    .card h3 {
++      margin-top: 0;
++      margin-bottom: 8px;
++      font-size: 20px;
++    }
++
++    .card p,
++    .feature-list li {
++      color: var(--muted);
++    }
++
++    .feature-list {
++      list-style: none;
++      padding: 0;
++      margin: 12px 0 0;
++    }
++
++    .feature-list li {
++      margin: 8px 0;
++      padding-left: 18px;
++      position: relative;
++    }
++
++    .feature-list li::before {
++      content: "•";
++      color: var(--accent);
++      position: absolute;
++      left: 0;
++    }
++
++    .contact {
++      margin: 24px 0 70px;
++      border: 1px solid var(--line);
++      border-radius: 18px;
++      background: rgba(255, 255, 255, 0.03);
++      display: flex;
++      justify-content: space-between;
++      align-items: center;
++      gap: 20px;
++      padding: 22px;
++      flex-wrap: wrap;
++    }
++
++    .contact p {
++      margin: 0;
++      color: var(--muted);
++    }
++
++    footer {
++      border-top: 1px solid rgba(255, 255, 255, 0.08);
++      padding: 24px 0 28px;
++      color: #8f98a7;
++      font-size: 14px;
++    }
++
++    @media (max-width: 950px) {
++      .hero-grid,
++      .cards {
++        grid-template-columns: 1fr;
++      }
++
++      .hero {
++        padding-top: 44px;
++      }
++
++      .hero-image {
++        min-height: 260px;
++      }
++    }
++  </style>
++</head>
++<body>
++  <header>
++    <div class="container nav">
++      <div class="logo">kia<span>.am</span></div>
++      <nav class="nav-links">
++        <a href="#models">Models</a>
++        <a href="#service">Service</a>
++        <a href="#about">About</a>
++      </nav>
++      <a class="cta" href="tel:+37493777740">📞 Զանգահարել</a>
++    </div>
++  </header>
++
++  <main>
++    <section class="hero container" id="about">
++      <div class="hero-grid">
++        <div>
++          <div class="badge">Official Style Landing</div>
++          <h1>Kia-ի ոճով պրեմիում կայք ձեր ավտոսերվիսի համար</h1>
++          <p class="lead">
++            Ժամանակակից դիզայն, մինիմալիստական կառուցվածք և հստակ կոնտակտային հատված՝
++            այնպես, ինչպես kia.am կայքում։
++          </p>
++          <div class="hero-actions">
++            <a class="cta" href="#contact">Ամրագրել այց</a>
++            <a class="btn-secondary" href="#models">Տեսնել մոդելներ</a>
++          </div>
++        </div>
++        <div class="hero-image" aria-label="Kia car banner"></div>
++      </div>
++    </section>
++
++    <section class="container" id="models">
++      <h2 class="section-title">Հանրաճանաչ մոդելներ</h2>
++      <div class="cards">
++        <article class="card">
++          <h3>Sportage</h3>
++          <p>SUV դասի հուսալի և հարմարավետ տարբերակ՝ քաղաքային ու միջքաղաքային ուղևորությունների համար։</p>
++        </article>
++        <article class="card">
++          <h3>Sorento</h3>
++          <p>Ընտանեկան մեծ ավտոմեքենա՝ բարձր անվտանգության և տեխնոլոգիական լուծումներով։</p>
++        </article>
++        <article class="card">
++          <h3>EV6</h3>
++          <p>Էլեկտրական նոր սերնդի ավտոմեքենա՝ դինամիկ դիզայնով և երկար վազքուղով։</p>
++        </article>
++      </div>
++    </section>
++
++    <section class="container" id="service">
++      <h2 class="section-title">Մեր սերվիսը</h2>
++      <div class="card">
++        <p>
++          Մենք կատարում ենք Kia ավտոմեքենաների լիարժեք սպասարկում՝ արագ, որակյալ և
++          երաշխավորված մոտեցմամբ։
++        </p>
++        <ul class="feature-list">
++          <li>Դիագնոստիկա ժամանակակից սարքավորումներով</li>
++          <li>Բնօրինակ պահեստամասերի տեղադրում</li>
++          <li>Կանխարգելիչ տեխնիկական սպասարկում</li>
++        </ul>
++      </div>
++    </section>
++
++    <section class="container" id="contact">
++      <div class="contact">
++        <div>
++          <h2 style="margin:0 0 8px;">Kia Service Armenia</h2>
++          <p>Երևան • Ամեն օր 10:00 - 19:00</p>
++        </div>
++        <a class="cta" href="tel:+37493777740">+374 93 777 740</a>
++      </div>
++    </section>
++  </main>
++
++  <footer>
++    <div class="container">© 2026 Kia Service Armenia — Built with kia.am style inspiration.</div>
++  </footer>
++</body>
++</html>
+ 
+EOF
+)
