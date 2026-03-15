@@ -1,57 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hy">
 <head>
-<meta charset="UTF-8">
-<title>Kia Service</title>
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  background: url('https://media.ed.edmunds-media.com/kia/forte/2022/oem/2022_kia_forte_sedan_gt_fq_oem_4_1280x855.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color:white;
-  text-align:center;
-}
-h1{
-  font-size:60px;
-  font-family:'Segoe UI', Arial, sans-serif;
-  text-shadow: 2px 2px 16px #000, 0 0 8px #fff;
-  letter-spacing: 2px;
-}
-p{
-  font-size:20px;
-  color:#ccc;
-}
-.coming-soon-box {
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 20px;
-  padding: 40px 60px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  margin-top: 40px;
-  animation: slideIn 1.2s ease-out;
-}
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-80px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kia Service Armenia</title>
+  <style>
+    :root {
+      --text: #ffffff;
+      --muted: #e6e6e6;
+      --accent: #d91f26;
+      --shadow: rgba(0, 0, 0, 0.55);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: #000;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+      background:
+        linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.2)),
+        url('https://www.kia.com/content/dam/kia2/in/en/images/one-kia/homepage/kv_01_pc.jpg') center/cover no-repeat;
+    }
+
+    .content {
+      width: min(980px, 100%);
+      text-align: center;
+      text-shadow: 0 4px 18px var(--shadow);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 7vw, 74px);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 14px auto 0;
+      font-size: clamp(17px, 2.2vw, 24px);
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      color: #fff;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        background-position: 60% center;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="coming-soon-box">
-  <h1>COMING SOON</h1>
-  <p style="font-size:24px;color:#fff;margin-bottom:10px;">Kia Service Website is Coming Soon</p>
-  <p style="font-size:18px;color:#eee;">kiaservice.am</p>
-  <p style="font-size:28px;color:#fff;font-weight:bold;margin-top:20px;text-shadow:0 0 12px #fff, 0 0 4px #ffd700;">📞 +37493777740</p>
-</div>
+  <main class="hero" aria-label="Kia մեծ նկար">
+    <div class="content">
+      <h1>KIA SERVICE ARMENIA</h1>
+      <p>kia.am ոճով պարզ և գեղեցիկ էջ՝ մեկ մեծ Kia նկարով և հստակ կոնտակտով։</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+37493777740">📞 Զանգահարել հիմա</a>
+        <a class="btn btn-outline" href="https://kia.am" target="_blank" rel="noopener noreferrer">Տեսնել kia.am</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
