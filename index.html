@@ -3,76 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kia Service Armenia | Պրոֆեսիոնալ Ավտոսպասարկում</title>
-    <style>
-        /* Ընդհանուր ոճեր */
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
-        
-        /* Վերնագիր և Լոգո */
-        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); sticky; top: 0; z-index: 1000; }
-        .logo-text { font-size: 24px; font-weight: bold; color: #bb162b; text-decoration: none; display: flex; align-items: center; }
-        .logo-text span { color: #333; margin-left: 5px; }
+    <title>KIA Service Armenia</title>
 
-        /* Նավիգացիա */
-        nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: 600; transition: 0.3s; cursor: pointer; }
-        nav a:hover { color: #bb162b; }
+    <link rel="stylesheet" href="css/style.css">
 
-        /* Գլխավոր Բաժին (Hero) */
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1486006396193-471d6158ecf5?q=80&w=2000') no-repeat center center/cover; 
-                height: 400px; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
-        .hero h1 { font-size: 3rem; margin: 0; }
-        .hero p { font-size: 1.2rem; margin: 15px 0; }
-        .btn { background: #bb162b; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; }
-        .btn:hover { background: #8e1020; }
-
-        /* Բաժինների կոնտեյներ */
-        .container { padding: 50px 10%; display: none; }
-        .active { display: block; animation: fadeIn 0.5s; }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        /* Ծառայությունների քարտեր */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #bb162b; }
-        .card h3 { margin-top: 0; color: #bb162b; }
-
-        /* Աշխատանքի բաժին */
-        .jobs-box { background: #333; color: white; padding: 40px; border-radius: 10px; text-align: center; }
-        .jobs-list { display: inline-block; text-align: left; margin-top: 20px; font-size: 1.1rem; }
-        .jobs-list li { margin-bottom: 10px; }
-
-        /* Հետադարձ կապ */
-        .contact-info { background: white; padding: 30px; border-radius: 10px; max-width: 600px; margin: auto; }
-        
-        /* Ֆուտեր */
-        footer { background: #222; color: white; text-align: center; padding: 30px; margin-top: 50px; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-    <a href="#" onclick="showPage('home')" class="logo-text">KIA <span>Service.am</span></a>
+
+    <div class="logo">
+        <a href="#">KIA SERVICE</a>
+    </div>
+
     <nav>
-        <a onclick="showPage('home')">Գլխավոր</a>
-        <a onclick="showPage('services')">Ծառայություններ</a>
-        <a onclick="showPage('careers')">Աշխատանք</a>
-        <a onclick="showPage('contact')">Կապ</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
+
 </header>
 
-<div id="home" class="container active">
-    <div class="hero">
-        <h1>Որակյալ Սպասարկում</h1>
-        <p>Մասնագիտացված Kia և Hyundai ավտոմեքենաների վերանորոգում</p>
-        <button class="btn" onclick="showPage('contact')">Ամրագրել հերթ</button>
-    </div>
-    
-    <div style="text-align: center; margin-top: 40px;">
-        <h2>Ինչու՞ ընտրել մեզ</h2>
-        <p>Մենք տրամադրում ենք երաշխիք կատարված աշխատանքների և տեղադրված պահեստամասերի համար:</p>
-    </div>
-</div>
 
-<div id="services" class="container">
-    <h2 s…
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>
+            Professional<br>
+            KIA Service
+        </h1>
+
+        <p>
+            Diagnostics • Maintenance • Engine Repair • Suspension • Original Parts
+        </p>
+
+        <div class="buttons">
+
+            <a href="booking.html" class="btn-red">
+                Book Service
+            </a>
+
+            <a href="tel:+37455579909" class="btn-white">
+                Call Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="services">
+
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Computer Diagnostics</h3>
+            <p>Modern dealer-level diagnostic equipment.</p>
+        </div>
+
+        <div class="card">
+            <h3>Engine Repair</h3>
+            <p>Professional engine maintenance and repair.</p>
+        </div>
+
+        <div class="card">
+            <h3>Oil Change</h3>
+            <p>Original filters and premium oils.</p>
+        </div>
+
+        <div class="card">
+            <h3>Brake Service</h3>
+            <p>Brake pads, discs and complete inspection.</p>
+        </div>
+
+        <div class="card">
+            <h3>Suspension</h3>
+            <p>Suspension diagnostics and repair.</p>
+        </div>
+
+        <div class="card">
+            <h3>Air Conditioning</h3>
+            <p>AC refill and repair.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="about">
+
+    <div class="about-text">
+
+        <h2>Why Choose Us</h2>
+
+        <p>
+
+            We provide high quality maintenance using professional equipment,
+            experienced technicians and genuine spare parts.
+
+        </p>
+
+        <a href="about.html" class="btn-red">
+            Learn More
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>055 57 99 09</p>
+
+    <p>091 57 99 09</p>
+
+    <p>Yerevan, Armenia</p>
+
+</section>
+
+
+
+<footer>
+
+    <p>
+        © 2026 KIA SERVICE ARMENIA
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
