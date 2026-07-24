@@ -54,6 +54,19 @@ nav a:hover{
     color:#c8102e;
 }
 
+.nav-v2{
+    background:#c8102e;
+    padding:8px 18px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-v2:hover{
+    background:#a00020;
+    color:#fff !important;
+}
+
 /* HERO */
 
 .hero{
