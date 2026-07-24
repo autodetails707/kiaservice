@@ -228,7 +228,7 @@ const Lightbox=(function(){
 /* =====================================================================
    11. Modal helpers
    ===================================================================== */
-function openModal(id){const m=document.getElementById(id);if(m){m.classList.add('open');document.body.style.overflow='hidden';}}
+function openModal(id){const m=document.getElementById(id);if(m){if(id==='bookingModal')restoreBooking();m.classList.add('open');document.body.style.overflow='hidden';}}
 function closeModal(el){const m=el.closest('.modal-back')||el;m.classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('click',e=>{
     if(e.target.matches('[data-open]'))openModal(e.target.dataset.open);
@@ -267,9 +267,28 @@ function initBooking(){
         try{const arr=JSON.parse(localStorage.getItem('kia_bookings')||'[]');
             arr.push({...Object.fromEntries(new FormData(form)),ts:Date.now()});
             localStorage.setItem('kia_bookings',JSON.stringify(arr));}catch(_){}
+        showBookingSuccess(form);
     };
     form.addEventListener('submit',e=>{e.preventDefault();send('wa');});
     const tg=form.querySelector('[data-send="tg"]'); if(tg)tg.addEventListener('click',()=>send('tg'));
+}
+
+/* ---------- Booking success message ---------- */
+let _bookingOrig=null;
+function showBookingSuccess(form){
+    const body=form.closest('.modal-body'); if(!body)return;
+    if(_bookingOrig===null)_bookingOrig=body.innerHTML;
+    body.innerHTML=`<div class="book-success">
+        <div class="bs-icon">✓</div>
+        <h3>Շնորհակալություն Ձեր հայտի համար։</h3>
+        <p>Մեր մասնագետը կապ կհաստատի Ձեզ հետ ամենակարճ ժամանակում։<br>Բացվող պատուհանում կարող եք ուղարկել հաղորդագրությունը։</p>
+        <button class="btn btn-primary modal-close">Լավ, փակել</button>
+      </div>`;
+}
+function restoreBooking(){
+    const m=document.getElementById('bookingModal'); if(!m||_bookingOrig===null)return;
+    const body=m.querySelector('.modal-body'); if(!body)return;
+    body.innerHTML=_bookingOrig; _bookingOrig=null; initBooking();
 }
 
 /* =====================================================================

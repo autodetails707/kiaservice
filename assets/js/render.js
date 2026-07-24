@@ -202,6 +202,48 @@ async function renderTeam(){
     revealAgain(grid);
 }
 
+/* =====================================================================
+   Render: CASE STUDIES
+   ===================================================================== */
+async function renderCases(){
+    const grid=document.getElementById('cases-grid'); if(!grid)return;
+    const data=await loadJSON('data/case-studies.json');
+    grid.innerHTML=data.map((c,i)=>`
+      <article class="case-card reveal ${'d'+(i%3+1)}">
+        <div class="case-img"><img loading="lazy" src="${c.img||svgPhoto(c.car,c.tag,i)}" alt="${c.car}" onerror="this.onerror=null;this.src='${svgPhoto(c.car,c.tag,i)}'"><span class="case-tag">${c.tag}</span></div>
+        <div class="case-body">
+          <h3>${c.car} <span>${c.year}</span></h3>
+          <div class="case-row"><b>Խնդիր՝</b><p>${c.problem}</p></div>
+          <div class="case-row"><b>Ախտորոշում՝</b><p>${c.diagnosis}</p></div>
+          <div class="case-row"><b>Աշխատանք՝</b><p>${c.work}</p></div>
+          <div class="case-result">✅ ${c.result}</div>
+        </div>
+      </article>`).join('');
+    revealAgain(grid);
+}
+
+/* =====================================================================
+   Render: BLOG
+   ===================================================================== */
+async function renderBlog(){
+    const grid=document.getElementById('blog-grid'); if(!grid)return;
+    const data=await loadJSON('data/blog.json');
+    grid.innerHTML=data.map((b,i)=>`
+      <article class="blog-card reveal ${'d'+(i%3+1)}" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-img"><img loading="lazy" src="${b.img||svgPhoto(b.title,b.tag,i)}" alt="${b.title}" itemprop="image" onerror="this.onerror=null;this.src='${svgPhoto(b.title,b.tag,i)}'"><span class="blog-tag">${b.tag}</span></div>
+        <div class="blog-body">
+          <time class="blog-date" itemprop="datePublished" datetime="${b.date}">${b.date}</time>
+          <h3 itemprop="headline">${b.title}</h3>
+          <p itemprop="description">${b.excerpt}</p>
+          <button class="blog-more" data-blog='${i}'>Կարդալ ավելին →</button>
+        </div>
+      </article>`).join('');
+    grid.querySelectorAll('.blog-more').forEach(btn=>{
+        btn.addEventListener('click',()=>{ if(window.openArticle)openArticle(data[+btn.dataset.blog]); });
+    });
+    revealAgain(grid);
+}
+
 /* ---------- re-observe freshly injected .reveal nodes ---------- */
 function revealAgain(scope){
     const els=scope.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-s');
@@ -215,7 +257,7 @@ function revealAgain(scope){
 /* ---------- Auto-run present sections ---------- */
 document.addEventListener('DOMContentLoaded',()=>{
     const home=document.body.dataset.page;
-    renderReviews(); renderFaq(); renderTeam();
+    renderReviews(); renderFaq(); renderTeam(); renderCases(); renderBlog();
     if(home==='home'){ renderServices(9); renderGallery(9); renderVideos(6); }
     else{ renderServices(); renderGallery(); renderVideos(); }
 });
