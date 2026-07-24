@@ -1,162 +1,469 @@
 <!DOCTYPE html>
 <html lang="hy">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIA Service Armenia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIA SERVICE — Պրոֆեսիոնալ KIA և HYUNDAI ավտոսպասարկում Զովունիում</title>
+<meta name="description" content="KIA SERVICE — պրեմիում ավտոսպասարկում Զովունիում։ 10+ տարվա փորձ, KIA և HYUNDAI մասնագիտացում (Elantra, Forte 2019–2025), ախտորոշում, շարժիչ, տուփ, խոդովոյ, բնօրինակ պահեստամասեր և երաշխիք։">
+<meta name="keywords" content="KIA service, Hyundai service, ավտոսերվիս, Elantra, Forte, Զովունի, ախտորոշում, շարժիչի վերանորոգում, պահեստամասեր">
+<meta name="author" content="KIA SERVICE">
+<meta name="theme-color" content="#e01933">
+<link rel="canonical" href="https://kiaservice.am/">
 
-    <link rel="stylesheet" href="css/style.css">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="KIA SERVICE — Պրեմիում KIA և HYUNDAI ավտոսպասարկում">
+<meta property="og:description" content="10+ տարվա փորձ · KIA & HYUNDAI · Elantra, Forte · Ախտորոշում, վերանորոգում, բնօրինակ պահեստամասեր։ Զովունի, Հայաստան։">
+<meta property="og:locale" content="hy_AM">
+<meta property="og:url" content="https://kiaservice.am/">
+<meta property="og:site_name" content="KIA SERVICE">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KIA SERVICE — Պրեմիում ավտոսպասարկում">
+<meta name="twitter:description" content="KIA & HYUNDAI մասնագիտացված սերվիս Զովունիում · 10+ տարի · Երաշխիք։">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoRepair",
+  "name":"KIA SERVICE",
+  "description":"Պրոֆեսիոնալ KIA և HYUNDAI ավտոսպասարկում Զովունիում։",
+  "image":"https://kiaservice.am/assets/images/og.jpg",
+  "telephone":"+37455579909",
+  "areaServed":"Armenia",
+  "address":{"@type":"PostalAddress","addressLocality":"Զովունի","addressCountry":"AM"},
+  "openingHours":"Mo-Sa 09:00-20:00",
+  "priceRange":"$$",
+  "makesOffer":"KIA, HYUNDAI ավտոսպասարկում",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"320"}
+}
+</script>
 </head>
 
-<body>
+<body data-page="home">
 
+<!-- Animated background -->
+<div class="bg-fx">
+  <div class="orb r"></div><div class="orb w"></div><div class="orb r2"></div>
+  <div class="grid-lines"></div>
+</div>
+<canvas id="particles"></canvas>
+
+<!-- ============ HEADER ============ -->
 <header>
-
-    <div class="logo">
-        <a href="#">KIA SERVICE</a>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="kia-service-v2.html" class="nav-v2">KIA Service v2</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
+  <a href="index.html" class="brand">
+    <span class="mark">K</span>
+    <span class="txt">KIA SERVICE<small>ЗОВУНИ · ARMENIA</small></span>
+  </a>
+  <nav class="nav">
+    <a href="#hero">Գլխավոր</a>
+    <a href="#services">Ծառայություններ</a>
+    <a href="parts.html">Պահեստամասեր</a>
+    <a href="#gallery">Գալերիա</a>
+    <a href="#about">Մեր մասին</a>
+    <a href="#contact">Կապ</a>
+  </nav>
+  <div class="header-cta">
+    <button class="btn btn-primary" data-open="bookingModal">Ամրագրել</button>
+    <button class="burger" aria-label="Մենյու"><span></span><span></span><span></span></button>
+  </div>
 </header>
 
-
-<section class="hero">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-        <h1>
-            Professional<br>
-            KIA Service
-        </h1>
-
-        <p>
-            Diagnostics • Maintenance • Engine Repair • Suspension • Original Parts
-        </p>
-
-        <div class="buttons">
-
-            <a href="booking.html" class="btn-red">
-                Book Service
-            </a>
-
-            <a href="tel:+37455579909" class="btn-white">
-                Call Now
-            </a>
-
-        </div>
-
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-badge reveal"><span class="pulse"></span> Բաց ենք · Զովունի, Հայաստան</div>
+      <h1 class="reveal d1">
+        <span class="line">Ձեր <span class="grad-text">KIA</span>-ի</span>
+        <span class="line">պրեմիում</span>
+        <span class="line">սպասարկումը</span>
+      </h1>
+      <p class="lead reveal d2">10+ տարվա փորձ · KIA և HYUNDAI մասնագիտացում · դիլերային ախտորոշում, բնօրինակ պահեստամասեր և երաշխիք յուրաքանչյուր աշխատանքի վրա։</p>
+      <div class="hero-actions reveal d3">
+        <button class="btn btn-primary" data-open="bookingModal">Ամրագրել սպասարկում</button>
+        <a class="btn btn-glass" data-call href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg> Զանգահարել</a>
+        <a class="btn btn-wa" data-wa target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.4 2.6 1.6.3.1.5.1.6-.1l.7-.9c.2-.3.4-.2.7-.1l1.9.9c.3.2.5.2.5.4.1.1.1.6-.1 1.1z"/></svg> WhatsApp</a>
+      </div>
+      <div class="hero-mini reveal d4">
+        <div class="m"><b>10+</b><span>Տարվա փորձ</span></div>
+        <div class="m"><b>5000+</b><span>Վերանորոգված մեքենա</span></div>
+        <div class="m"><b>98%</b><span>Գոհ հաճախորդ</span></div>
+      </div>
     </div>
-
-</section>
-
-
-
-<section class="services">
-
-    <h2>Our Services</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Computer Diagnostics</h3>
-            <p>Modern dealer-level diagnostic equipment.</p>
-        </div>
-
-        <div class="card">
-            <h3>Engine Repair</h3>
-            <p>Professional engine maintenance and repair.</p>
-        </div>
-
-        <div class="card">
-            <h3>Oil Change</h3>
-            <p>Original filters and premium oils.</p>
-        </div>
-
-        <div class="card">
-            <h3>Brake Service</h3>
-            <p>Brake pads, discs and complete inspection.</p>
-        </div>
-
-        <div class="card">
-            <h3>Suspension</h3>
-            <p>Suspension diagnostics and repair.</p>
-        </div>
-
-        <div class="card">
-            <h3>Air Conditioning</h3>
-            <p>AC refill and repair.</p>
-        </div>
-
+    <div class="hero-visual reveal-r">
+      <div class="hero-logo">
+        <span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
+        <span class="kia">KIA<small>SERVICE</small></span>
+      </div>
+      <div class="floating-chip c1"><b>Elantra</b><small>2019 – 2025</small></div>
+      <div class="floating-chip c2"><b>Forte</b><small>Full Service</small></div>
+      <div class="floating-chip c3"><b>Դիագնոստիկա</b><small>Դիլերային մակարդակ</small></div>
     </div>
-
+  </div>
+  <a href="#about" class="scroll-ind">SCROLL<span class="mouse"></span></a>
 </section>
 
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>KIA</span><span>HYUNDAI</span><span>ELANTRA</span><span>FORTE</span><span>K5</span><span>SPORTAGE</span><span>TUCSON</span><span>SORENTO</span>
+    <span>KIA</span><span>HYUNDAI</span><span>ELANTRA</span><span>FORTE</span><span>K5</span><span>SPORTAGE</span><span>TUCSON</span><span>SORENTO</span>
+  </div>
+</div>
 
-
-<section class="about">
-
-    <div class="about-text">
-
-        <h2>Why Choose Us</h2>
-
-        <p>
-
-            We provide high quality maintenance using professional equipment,
-            experienced technicians and genuine spare parts.
-
-        </p>
-
-        <a href="about.html" class="btn-red">
-            Learn More
-        </a>
-
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal-l">
+      <svg class="car-silhouette" viewBox="0 0 600 300" fill="none">
+        <path d="M40 220 L100 220 C112 175 150 150 210 150 L360 150 C415 150 450 172 475 205 L540 215 C566 219 580 230 580 250 L580 260 L40 260 Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+        <path d="M225 160 L345 160 L385 200 L200 200 Z" fill="rgba(224,25,51,0.25)"/>
+        <circle cx="180" cy="260" r="38" fill="#0b0b0f" stroke="#e01933" stroke-width="6"/>
+        <circle cx="180" cy="260" r="14" fill="rgba(255,255,255,0.15)"/>
+        <circle cx="460" cy="260" r="38" fill="#0b0b0f" stroke="#e01933" stroke-width="6"/>
+        <circle cx="460" cy="260" r="14" fill="rgba(255,255,255,0.15)"/>
+      </svg>
+      <div class="exp-badge"><b>10+</b><span>Տարվա փորձ</span></div>
     </div>
-
+    <div class="about-text reveal-r">
+      <div class="eyebrow">Մեր մասին</div>
+      <h2>KIA-ի և HYUNDAI-ի Ձեր <span class="accent">վստահելի</span> սերվիսը</h2>
+      <p>KIA SERVICE-ը Զովունիում գործող մասնագիտացված ավտոսերվիս է՝ 10+ տարվա փորձով և 5–6 բարձրակարգ վարպետներից բաղկացած թիմով։ Մենք մասնագիտանում ենք KIA և HYUNDAI մեքենաների վրա, հատկապես Elantra և Forte մոդելների (2019–2025)։</p>
+      <p>Աշխատում ենք դիլերային մակարդակի ախտորոշիչ սարքավորումներով, պրոֆեսիոնալ վերելակներով և բնօրինակ պահեստամասերով՝ երաշխավորելով որակ ու երկարակեցություն։</p>
+      <div class="about-feats">
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Փորձառու վարպետներ</b><span>KIA/HYUNDAI մասնագետներ</span></div></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Բնօրինակ պահեստամասեր</b><span>Original / OEM</span></div></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Ժամանակակից սարքավորում</b><span>Դիլերային մակարդակ</span></div></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Որակի երաշխիք</b><span>Ամեն աշխատանքի վրա</span></div></div>
+      </div>
+      <button class="btn btn-primary" data-open="bookingModal">Ամրագրել այց</button>
+    </div>
+  </div>
 </section>
 
-
-
-<section class="contact">
-
-    <h2>Contact Us</h2>
-
-    <p>055 57 99 09</p>
-
-    <p>091 57 99 09</p>
-
-    <p>Yerevan, Armenia</p>
-
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><div class="num"><span data-count="10">0</span>+</div><p>Տարվա փորձ</p></div>
+    <div class="stat reveal d1"><div class="num"><span data-count="5000">0</span>+</div><p>Վերանորոգված մեքենա</p></div>
+    <div class="stat reveal d2"><div class="num"><span data-count="98">0</span>%</div><p>Գոհ հաճախորդ</p></div>
+    <div class="stat reveal d3"><div class="num"><span data-count="24">0</span>h</div><p>Աջակցություն</p></div>
+  </div>
 </section>
 
+<!-- ============ WHY CHOOSE ============ -->
+<section id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ինչու՞ մենք</div>
+      <h2>Ինչու՞ ընտրել <span class="accent">KIA SERVICE</span></h2>
+      <p>Որակ, ազնվություն և պրոֆեսիոնալիզմ՝ Ձեր մեքենայի յուրաքանչյուր դետալի համար։</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3L18 20l-6-3-6 3 1.5-6.8L3 8.9 9 8z"/></svg></div>
+        <h3>10+ տարվա փորձ</h3><p>Հազարավոր հաջողությամբ սպասարկված KIA և HYUNDAI մեքենաներ։</p>
+      </div>
+      <div class="why-card reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Երաշխիք և ազնվություն</h3><p>Թափանցիկ գներ, ոչ մի թաքնված ծախս, երաշխիք ամեն ինչի վրա։</p>
+      </div>
+      <div class="why-card reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 8V4H8M4 12H2M12 22a10 10 0 1 0 0-20"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Դիլերային ախտորոշում</h3><p>Ամենաժամանակակից համակարգիչներով ճշգրիտ ախտորոշում։</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M14 6a4 4 0 0 0-5 5l-6 6 3 3 6-6a4 4 0 0 0 5-5l-3 3-3-3z"/></svg></div>
+        <h3>Բնօրինակ պահեստամասեր</h3><p>Original, OEM և որակյալ aftermarket՝ ըստ Ձեր ընտրության։</p>
+      </div>
+      <div class="why-card reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3>Արագ սպասարկում</h3><p>Մեծ պահեստ և կազմակերպված աշխատանք՝ նվազագույն սպասում։</p>
+      </div>
+      <div class="why-card reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/></svg></div>
+        <h3>Փորձառու թիմ</h3><p>5–6 բարձրակարգ վարպետ՝ նեղ մասնագիտացումներով։</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ծառայություններ</div>
+      <h2>Ամեն ինչ Ձեր <span class="accent">մեքենայի</span> համար</h2>
+      <p>30+ ծառայություն մեկ վայրում՝ ախտորոշումից մինչև կապիտալ վերանորոգում։</p>
+    </div>
+    <div class="svc-toolbar" id="svc-toolbar">
+      <button class="chip active" data-cat="all">Բոլորը</button>
+      <button class="chip" data-cat="diag">Ախտորոշում</button>
+      <button class="chip" data-cat="engine">Շարժիչ</button>
+      <button class="chip" data-cat="trans">Տրանսմիսիա</button>
+      <button class="chip" data-cat="chassis">Խոդովոյ</button>
+      <button class="chip" data-cat="elec">Էլեկտրիկա</button>
+      <button class="chip" data-cat="comfort">Կլիմա</button>
+    </div>
+    <div class="svc-grid" id="svc-grid"></div>
+    <div class="text-center mt-40"><a href="services.html" class="btn btn-glass">Բոլոր ծառայությունները →</a></div>
+  </div>
+</section>
 
+<!-- ============ ADVANTAGES / EQUIPMENT ============ -->
+<section class="stats" id="equipment">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Մեր առավելությունները</div>
+      <h2>Ինչ ունենք <span class="accent">մենք</span></h2>
+      <p>Պրոֆեսիոնալ միջավայր՝ Ձեր մեքենան լավագույն ձեռքերում է։</p>
+    </div>
+    <div class="adv-grid">
+      <div class="adv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V10M20 21V10M4 14h16M8 10V6h8v4"/></svg></div><div><b>Պրոֆեսիոնալ վերելակներ</b><span>Ապահով և արագ</span></div></div>
+      <div class="adv reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><div><b>Դիագնոստիկ համակարգիչներ</b><span>Դիլերային մակարդակ</span></div></div>
+      <div class="adv reveal d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 6a4 4 0 0 0-5 5l-6 6 3 3 6-6a4 4 0 0 0 5-5l-3 3-3-3z"/></svg></div><div><b>Հատուկ գործիքներ</b><span>KIA/HYUNDAI-ի համար</span></div></div>
+      <div class="adv reveal d3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Մաքուր սերվիս</b><span>Կարգ ու կանոն</span></div></div>
+      <div class="adv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h6"/></svg></div><div><b>Պրոֆեսիոնալ տարածք</b><span>Ընդարձակ բոքսեր</span></div></div>
+      <div class="adv reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3L18 20l-6-3-6 3 1.5-6.8L3 8.9 9 8z"/></svg></div><div><b>Բարձրորակ սարքավորում</b><span>Ժամանակակից</span></div></div>
+      <div class="adv reveal d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><b>Փորձառու վարպետներ</b><span>5–6 մասնագետ</span></div></div>
+      <div class="adv reveal d3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div><div><b>Մեծ պահեստ</b><span>Պահեստամասերի առատություն</span></div></div>
+      <div class="adv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><div><b>Արագ սպասարկում</b><span>Ժամանակի գնահատում</span></div></div>
+      <div class="adv reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><b>Որակի երաշխիք</b><span>Գրավոր երաշխիք</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section id="beforeafter">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Before / After</div>
+      <h2>Արդյունքը՝ <span class="accent">ակնհայտ</span></h2>
+      <p>Քաշեք սահիչը՝ տեսնելու համար «առաջ» և «հետո» տարբերությունը։</p>
+    </div>
+    <div class="ba-wrap reveal-s">
+      <div class="ba">
+        <div class="layer before">ԱՌԱՋ</div>
+        <div class="layer after">ՀԵՏՈ</div>
+        <span class="label l">ԱՌԱՋ</span><span class="label r">ՀԵՏՈ</span>
+        <div class="handle" style="left:50%"><div class="grip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Գալերիա</div>
+      <h2>Մեր <span class="accent">աշխատանքները</span></h2>
+      <p>Իրական աշխատանքներ մեր սերվիսից։ Սեղմեք՝ մեծացնելու համար։</p>
+    </div>
+    <div class="gal-filter" id="gal-filter">
+      <button class="chip active" data-cat="all">Բոլորը</button>
+      <button class="chip" data-cat="kia">KIA</button>
+      <button class="chip" data-cat="hyundai">HYUNDAI</button>
+      <button class="chip" data-cat="elantra">Elantra</button>
+      <button class="chip" data-cat="forte">Forte</button>
+      <button class="chip" data-cat="engine">Շարժիչ</button>
+      <button class="chip" data-cat="transmission">Տուփ</button>
+      <button class="chip" data-cat="suspension">Խոդովոյ</button>
+    </div>
+    <div class="masonry" id="gal-grid"></div>
+    <div class="text-center mt-40"><a href="gallery.html" class="btn btn-glass">Ամբողջ գալերիան →</a></div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="stats" id="videos">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Վիդեո</div>
+      <h2>Տեսանյութեր մեր <span class="accent">աշխատանքից</span></h2>
+      <p>Դիտեք, թե ինչպես ենք վերականգնում Ձեր մեքենան։</p>
+    </div>
+    <div class="vid-grid" id="vid-grid"></div>
+  </div>
+</section>
+
+<!-- ============ WORK PROCESS ============ -->
+<section id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Աշխատանքի ընթացք</div>
+      <h2>Ինչպես ենք <span class="accent">աշխատում</span></h2>
+      <p>Պարզ և թափանցիկ 6 քայլ՝ ամրագրումից մինչև հանձնում։</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-step reveal-r"><span class="dot"></span><div class="card"><div class="n">ՔԱՅԼ 01</div><h4>Ամրագրում</h4><p>Ամրագրեք այց կայքից, WhatsApp-ով, Telegram-ով կամ զանգով։</p></div></div>
+      <div class="tl-step reveal-l"><span class="dot"></span><div class="card"><div class="n">ՔԱՅԼ 02</div><h4>Զննում</h4><p>Մեքենայի նախնական վիզուալ ստուգում և ընդունում։</p></div></div>
+      <div class="tl-step reveal-r"><span class="dot"></span><div class="card"><div class="n">ՔԱՅԼ 03</div><h4>Ախտորոշում</h4><p>Դիլերային սարքավորումներով ճշգրիտ ախտորոշում։</p></div></div>
+      <div class="tl-step reveal-l"><span class="dot"></span><div class="card"><div class="n">ՔԱՅԼ 04</div><h4>Վերանորոգում</h4><p>Աշխատանք բնօրինակ պահեստամասերով և հաստատված գնով։</p></div></div>
+      <div class="tl-step reveal-r"><span class="dot"></span><div class="card"><div class="n">ՔԱՅԼ 05</div><h4>Փորձարկում</h4><p>Որակի վերահսկում և ճանապարհային թեստ։</p></div></div>
+      <div class="tl-step reveal-l"><span class="dot"></span><div class="card"><div class="n">ՔԱՅԼ 06</div><h4>Հանձնում</h4><p>Մեքենայի հանձնում երաշխիքով և խորհրդատվությամբ։</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECIALISTS ============ -->
+<section id="team">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Մեր թիմը</div>
+      <h2>Փորձառու <span class="accent">վարպետներ</span></h2>
+      <p>5–6 բարձրակարգ մասնագետ՝ նեղ ուղղվածությամբ։</p>
+    </div>
+    <div class="team-grid" id="team-grid"></div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Կարծիքներ</div>
+      <h2>Ինչ են ասում մեր <span class="accent">հաճախորդները</span></h2>
+    </div>
+    <div class="reveal-s">
+      <div class="slider"><div class="slides" id="rev-slides"></div></div>
+      <div class="slider-nav">
+        <button class="prev" aria-label="Նախորդ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="next" aria-label="Հաջորդ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+      <div class="dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Հ.Տ.Հ</div>
+      <h2>Հաճախ տրվող <span class="accent">հարցեր</span></h2>
+    </div>
+    <div class="faq-wrap" id="faq-wrap"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Կապ</div>
+      <h2>Կապվեք <span class="accent">մեզ հետ</span></h2>
+      <p>Զանգահարեք, գրեք կամ այցելեք։ Մենք միշտ պատրաստ ենք օգնել։</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal-l">
+        <div class="contact-cards">
+          <div class="c-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></div><b>Հեռախոս</b><a href="tel:+37455579909">055 57 99 09</a><a href="tel:+37491579909">091 57 99 09</a></div>
+          <div class="c-card"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2z"/></svg></div><b>WhatsApp / Telegram</b><a data-wa target="_blank">WhatsApp գրել</a><a data-tg target="_blank">Telegram գրել</a></div>
+          <div class="c-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><b>Հասցե</b><span>Զովունի, Հայաստան</span></div>
+          <div class="c-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><b>Աշխատաժամեր</b><span>Երկ – Շաբ · 09:00 – 20:00</span></div>
+        </div>
+        <div class="socials">
+          <a data-wa target="_blank" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2z"/></svg></a>
+          <a data-tg target="_blank" aria-label="Telegram"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22 3L2 11l6 2 2 6 3-4 5 4z"/></svg></a>
+          <a data-fb target="_blank" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H8v3h2v6h3v-6h3l1-3h-4v-2a1 1 0 0 1 1-1z"/></svg></a>
+          <a data-ig target="_blank" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a data-call aria-label="Զանգ"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="map-wrap reveal-r">
+        <iframe title="KIA SERVICE քարտեզ" loading="lazy" src="https://www.google.com/maps?q=Zovuni,Armenia&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
 <footer>
-
-    <p>
-        © 2026 KIA SERVICE ARMENIA
-    </p>
-
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px"><span class="mark">K</span><span class="txt">KIA SERVICE<small>ЗОВУНИ · ARMENIA</small></span></a>
+        <p>Պրոֆեսիոնալ KIA և HYUNDAI ավտոսպասարկում Զովունիում՝ որակի և վստահության երաշխիքով։</p>
+      </div>
+      <div>
+        <h4>Բաժիններ</h4>
+        <a href="#services">Ծառայություններ</a><a href="parts.html">Պահեստամասեր</a><a href="#gallery">Գալերիա</a><a href="#team">Մեր թիմը</a><a href="#faq">Հ.Տ.Հ</a>
+      </div>
+      <div>
+        <h4>Մոդելներ</h4>
+        <a href="#">KIA Elantra</a><a href="#">KIA Forte</a><a href="#">KIA K5</a><a href="#">Hyundai Tucson</a><a href="#">Hyundai Sportage</a>
+      </div>
+      <div>
+        <h4>Կապ</h4>
+        <a href="tel:+37455579909">055 57 99 09</a><a href="tel:+37491579909">091 57 99 09</a>
+        <p>Զովունի, Հայաստան</p><p>Երկ – Շաբ · 09:00 – 20:00</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> KIA SERVICE · Բոլոր իրավունքները պաշտպանված են</span>
+      <a href="admin/index.html" style="color:var(--muted-2)">Ադմին</a>
+    </div>
+  </div>
 </footer>
 
+<!-- ============ FAB ============ -->
+<div class="fab">
+  <a class="wa" data-wa target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2z"/></svg></a>
+  <a class="tg" data-tg target="_blank" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="#fff"><path d="M22 3L2 11l6 2 2 6 3-4 5 4z"/></svg></a>
+  <a class="call" data-call aria-label="Զանգ"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></a>
+</div>
 
-<script src="js/script.js"></script>
+<!-- ============ BOOKING MODAL ============ -->
+<div class="modal-back" id="bookingModal">
+  <div class="modal modal-lg glass">
+    <div class="modal-head">
+      <div><h3>Ամրագրել սպասարկում</h3><p>Լրացրեք ձևը՝ մենք կկապվենք Ձեզ հետ</p></div>
+      <button class="modal-close" aria-label="Փակել">✕</button>
+    </div>
+    <div class="modal-body">
+      <form id="bookingForm">
+        <div class="two-col">
+          <div class="field"><label>Անուն *</label><input name="name" required placeholder="Ձեր անունը"></div>
+          <div class="field"><label>Հեռախոս *</label><input name="phone" required type="tel" placeholder="0XX XXX XXX"></div>
+        </div>
+        <div class="two-col">
+          <div class="field"><label>Մեքենա</label>
+            <select name="car">
+              <option>KIA Elantra</option><option>KIA Forte</option><option>KIA K5</option>
+              <option>KIA Sportage</option><option>KIA Sorento</option>
+              <option>Hyundai Elantra</option><option>Hyundai Tucson</option><option>Hyundai Santa Fe</option><option>Hyundai Accent</option>
+              <option>Այլ</option>
+            </select>
+          </div>
+          <div class="field"><label>Տարեթիվ</label>
+            <select name="year"><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>Այլ</option></select>
+          </div>
+        </div>
+        <div class="field"><label>Խնդիրը</label><textarea name="problem" placeholder="Նկարագրեք անսարքությունը..."></textarea></div>
+        <div class="two-col">
+          <div class="field"><label>Նախընտրելի ամսաթիվ</label><input name="date" type="date"></div>
+          <div class="field"><label>Նախընտրելի ժամ</label><input name="time" type="time"></div>
+        </div>
+        <div class="two-col" style="margin-top:8px">
+          <button type="submit" class="btn btn-wa" style="justify-content:center"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2z"/></svg> Ուղարկել WhatsApp</button>
+          <button type="button" data-send="tg" class="btn btn-tg" style="justify-content:center"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 3L2 11l6 2 2 6 3-4 5 4z"/></svg> Ուղարկել Telegram</button>
+        </div>
+        <div class="modal-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Ուղարկելուց հետո կբացվի WhatsApp/Telegram՝ պատրաստ հաղորդագրությամբ։</div>
+      </form>
+    </div>
+  </div>
+</div>
 
+<script src="assets/js/main.js"></script>
+<script src="assets/js/render.js"></script>
 </body>
 </html>

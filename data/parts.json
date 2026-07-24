@@ -1,0 +1,18 @@
+[
+  {"cat":"Elantra","name":"Օդի ֆիլտր · Elantra","code":"28113-F2000","price":4500,"type":"orig","stock":true,"desc":"Բնօրինակ օդի ֆիլտր Hyundai Elantra 2019–2025 մոդելների համար։"},
+  {"cat":"Elantra","name":"Արգելակի կոճղակներ առջև","code":"58101-F2A00","price":18000,"type":"oem","stock":true,"desc":"Առջևի արգելակային կոճղակների հավաքածու Elantra-ի համար։"},
+  {"cat":"Forte","name":"Յուղի ֆիլտր · Forte","code":"26300-35505","price":3200,"type":"orig","stock":true,"desc":"Բնօրինակ յուղի ֆիլտր KIA Forte / Elantra շարժիչների համար։"},
+  {"cat":"Forte","name":"ГРМ գոտու հավաքածու","code":"24410-2E000","price":42000,"type":"oem","stock":true,"desc":"Ремень ГРМ-ի ամբողջական հավաքածու՝ ролик-ներով։"},
+  {"cat":"Forte","name":"Կցորդիչի կոմպլեկտ","code":"41200-2D100","price":68000,"type":"orig","stock":false,"desc":"Сцепление-ի ամբողջական հավաքածու մեխանիկական տուփի համար։"},
+  {"cat":"K5","name":"Առջևի ամորտիզատոր · K5","code":"54650-L1000","price":54000,"type":"orig","stock":true,"desc":"Առջևի ամորտիզատոր KIA K5 մոդելի համար։"},
+  {"cat":"K5","name":"Օդորակիչի կոմպրեսոր","code":"97701-L1000","price":135000,"type":"oem","stock":true,"desc":"Կոնդիցիոների կոմպրեսոր՝ երաշխիքով։"},
+  {"cat":"Sportage","name":"Արգելակի սկավառակ առջև","code":"51712-D9000","price":26000,"type":"oem","stock":true,"desc":"Առջևի արգելակային սկավառակ KIA Sportage-ի համար։"},
+  {"cat":"Sportage","name":"Օդի ֆիլտր · Sportage","code":"28113-D3300","price":5200,"type":"orig","stock":true,"desc":"Բնօրինակ օդի ֆիլտր KIA Sportage-ի համար։"},
+  {"cat":"Tucson","name":"Անվի առանցքակալ (ступица)","code":"51750-D3000","price":38000,"type":"oem","stock":true,"desc":"Առջևի անվի առանցքակալ Hyundai Tucson-ի համար։"},
+  {"cat":"Tucson","name":"Генератор · Tucson","code":"37300-2E820","price":98000,"type":"used","stock":true,"desc":"Ստուգված վիճակում генератор Hyundai Tucson-ի համար։"},
+  {"cat":"Sorento","name":" Радиатор հովացման","code":"25310-C5850","price":72000,"type":"oem","stock":false,"desc":"Հովացման ռադիատոր KIA Sorento-ի համար։"},
+  {"cat":"Santa Fe","name":"Ստարтер · Santa Fe","code":"36100-2G000","price":86000,"type":"orig","stock":true,"desc":"Բնօրինակ ստարтер Hyundai Santa Fe-ի համար։"},
+  {"cat":"Accent","name":"Սալոնի ֆիլտր · Accent","code":"97133-1R000","price":3800,"type":"oem","stock":true,"desc":"Սալոնի օդի ֆիլтр Hyundai Accent-ի համար։"},
+  {"cat":"Accent","name":"Аккумулятор 60Ah","code":"37110-2P000","price":42000,"type":"oem","stock":true,"desc":"60Ah մարտկոց՝ երաշխիքով, Accent և այլ մոդելների համար։"},
+  {"cat":"Elantra","name":"Ինժեկтор (ֆорсунка)","code":"35310-2E520","price":58000,"type":"orig","stock":true,"desc":"Բնօրինակ վառելիքի ֆорсունка Elantra-ի համար։"}
+]
