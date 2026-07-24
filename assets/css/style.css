@@ -451,7 +451,8 @@ header.scrolled{
 .review-card .stars{color:#ffc531;font-size:20px;letter-spacing:3px;margin-bottom:18px}
 .review-card p{font-size:clamp(16px,2vw,21px);line-height:1.6;margin-bottom:26px}
 .review-card .who{display:flex;align-items:center;justify-content:center;gap:14px}
-.review-card .who .av{width:50px;height:50px;border-radius:50%;background:var(--grad-red);display:grid;place-items:center;font-weight:800}
+.review-card .who .av{width:50px;height:50px;border-radius:50%;background:var(--grad-red);display:grid;place-items:center;font-weight:800;overflow:hidden;flex:none}
+.review-card .who .av img{width:100%;height:100%;object-fit:cover}
 .review-card .who b{display:block}
 .review-card .who span{color:var(--muted);font-size:13px}
 .slider-nav{display:flex;justify-content:center;gap:14px;margin-top:26px}

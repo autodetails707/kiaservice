@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ադմին · Վահանակ — KIA SERVICE</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="admin">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo"><span class="mark">K</span><div><b>KIA SERVICE</b><small>ADMIN</small></div></div>
+    <button class="nav-item active" data-sec="dashboard" data-title="Վահանակ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg> Վահանակ</button>
+    <button class="nav-item" data-sec="parts" data-title="Պահեստամասեր"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 6a4 4 0 0 0-5 5l-6 6 3 3 6-6a4 4 0 0 0 5-5l-3 3-3-3z"/></svg> Պահեստամասեր</button>
+    <button class="nav-item" data-sec="services" data-title="Ծառայություններ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg> Ծառայություններ</button>
+    <button class="nav-item" data-sec="gallery" data-title="Գալերիա"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg> Գալերիա</button>
+    <button class="nav-item" data-sec="videos" data-title="Վիդեո"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3z"/></svg> Վիդեո</button>
+    <button class="nav-item" data-sec="reviews" data-title="Կարծիքներ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3L18 20l-6-3-6 3 1.5-6.8L3 8.9 9 8z"/></svg> Կարծիքներ</button>
+    <button class="nav-item" data-sec="faq" data-title="Հ.Տ.Հ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg> Հ.Տ.Հ</button>
+    <button class="nav-item" data-sec="specialists" data-title="Վարպետներ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Վարպետներ</button>
+    <button class="nav-item" data-sec="settings" data-title="Կարգավորումներ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.6-2-3.4-2.4 1a7 7 0 0 0-1.7-1L14.5 2h-5l-.3 3a7 7 0 0 0-1.7 1l-2.4-1-2 3.4L5 11a7 7 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 1.7 1l.3 3h5l.3-3a7 7 0 0 0 1.7-1l2.4 1 2-3.4L19 13a7 7 0 0 0 0-1z"/></svg> Կարգավորումներ</button>
+    <button class="nav-item logout" id="logoutBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg> Ելք</button>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="mobile-toggle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+        <h2 id="pageTitle">Վահանակ</h2>
+      </div>
+      <div class="actions">
+        <span class="badge">● Online</span>
+        <label class="btn btn-ghost btn-sm" style="cursor:pointer">Ներմուծել<input type="file" id="importInput" accept="application/json" hidden></label>
+        <button class="btn btn-green btn-sm" id="exportBtn">Արտահանել JSON</button>
+        <button class="btn btn-danger btn-sm" id="resetBtn">Reset</button>
+        <a class="btn btn-ghost btn-sm" href="../index.html" target="_blank">Կայք ↗</a>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <section class="section active" id="sec-dashboard">
+      <div class="cards" id="statCards"></div>
+      <div class="panel">
+        <div class="panel-head"><h3>Բարի գալուստ, Ադմին 👋</h3></div>
+        <div style="padding:22px;color:var(--muted);font-size:14px;line-height:1.7">
+          Այս վահանակից կարող եք կառավարել կայքի ամբողջ բովանդակությունը՝ պահեստամասեր, ծառայություններ, գալերիա, կարծիքներ, վարպետներ և կարգավորումներ։<br><br>
+          Փոփոխությունները պահվում են բրաուզերում (localStorage)։ Մշտական պահպանման համար սեղմեք <b>«Արտահանել JSON»</b> և տեղադրեք ֆայլը <code>/data</code> պանակում, կամ օգտագործեք <b>«Ներմուծել»</b>՝ նախկին տվյալները վերականգնելու համար։
+        </div>
+      </div>
+    </section>
+
+    <!-- Parts -->
+    <section class="section" id="sec-parts">
+      <div class="panel">
+        <div class="panel-head"><h3>Պահեստամասեր</h3><button class="btn btn-primary btn-sm" style="width:auto" data-add="parts">+ Ավելացնել</button></div>
+        <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Նկար</th><th>Անվանում</th><th>Կոդ</th><th>Մոդել</th><th>Գին</th><th>Տեսակ</th><th>Առկա</th><th></th></tr></thead><tbody id="tbody-parts"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="sec-services">
+      <div class="panel">
+        <div class="panel-head"><h3>Ծառայություններ</h3><button class="btn btn-primary btn-sm" style="width:auto" data-add="services">+ Ավելացնել</button></div>
+        <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Անվանում</th><th>Կատեգորիա</th><th>Նկարագրություն</th><th></th></tr></thead><tbody id="tbody-services"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="sec-gallery">
+      <div class="panel">
+        <div class="panel-head"><h3>Գալերիա</h3><button class="btn btn-primary btn-sm" style="width:auto" data-add="gallery">+ Ավելացնել</button></div>
+        <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Վերնագիր</th><th>Պիտակ</th><th>Կատեգորիա</th><th></th></tr></thead><tbody id="tbody-gallery"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="section" id="sec-videos">
+      <div class="panel">
+        <div class="panel-head"><h3>Վիդեո</h3><button class="btn btn-primary btn-sm" style="width:auto" data-add="videos">+ Ավելացնել</button></div>
+        <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Վերնագիր</th><th>YouTube ID</th><th>Տևողություն</th><th></th></tr></thead><tbody id="tbody-videos"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section" id="sec-reviews">
+      <div class="panel">
+        <div class="panel-head"><h3>Կարծիքներ</h3><button class="btn btn-primary btn-sm" style="width:auto" data-add="reviews">+ Ավելացնել</button></div>
+        <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Անուն</th><th>Մեքենա</th><th>Աստղեր</th><th></th></tr></thead><tbody id="tbody-reviews"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="sec-faq">
+      <div class="panel">
+        <div class="panel-head"><h3>Հ.Տ.Հ</h3><button class="btn btn-primary btn-sm" style="width:auto" data-add="faq">+ Ավելացնել</button></div>
+        <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Հարց</th><th></th></tr></thead><tbody id="tbody-faq"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Specialists -->
+    <section class="section" id="sec-specialists">
+      <div class="panel">
+        <div class="panel-head"><h3>Վարպետներ</h3><button class="btn btn-primary btn-sm" style="width:auto" data-add="specialists">+ Ավելացնել</button></div>
+        <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Անուն</th><th>Պաշտոն</th><th>Փորձ</th><th></th></tr></thead><tbody id="tbody-specialists"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section class="section" id="sec-settings">
+      <div class="panel">
+        <div class="panel-head"><h3>Կայքի կարգավորումներ · Կապ · Բաններ</h3></div>
+        <form id="settingsForm" style="padding:22px">
+          <div class="grid2">
+            <div class="f"><label>Ընկերության անուն</label><input name="name"></div>
+            <div class="f"><label>Կարգախոս (banner)</label><input name="tagline"></div>
+          </div>
+          <div class="grid2">
+            <div class="f"><label>Հեռախոս 1</label><input name="phone1"></div>
+            <div class="f"><label>Հեռախոս 2</label><input name="phone2"></div>
+          </div>
+          <div class="grid2">
+            <div class="f"><label>WhatsApp (թիվ)</label><input name="whatsapp"></div>
+            <div class="f"><label>Telegram (թիվ)</label><input name="telegram"></div>
+          </div>
+          <div class="grid2">
+            <div class="f"><label>Facebook URL</label><input name="facebook"></div>
+            <div class="f"><label>Instagram URL</label><input name="instagram"></div>
+          </div>
+          <div class="grid2">
+            <div class="f"><label>Հասցե</label><input name="location"></div>
+            <div class="f"><label>Աշխատաժամեր</label><input name="hours"></div>
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:auto;padding:13px 30px">Պահպանել կարգավորումները</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Item modal -->
+<div class="mback" id="itemModal">
+  <div class="mbox">
+    <div class="mhead"><h3 id="mTitle">Ավելացնել</h3><button class="mclose">✕</button></div>
+    <div class="mbody" id="mBody"></div>
+    <div class="mfoot"><button class="btn btn-ghost mclose">Չեղարկել</button><button class="btn btn-primary" id="mSave" style="width:auto">Պահպանել</button></div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+<script>Dashboard.init();</script>
+</body>
+</html>

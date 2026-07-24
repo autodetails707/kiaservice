@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ադմին · Մուտք — KIA SERVICE</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="login-wrap">
+  <div class="login-card">
+    <div class="logo"><span class="mark">K</span><div><h1>KIA SERVICE</h1></div></div>
+    <p class="sub">Ադմին վահանակ · Մուտք գործեք համակարգ</p>
+    <form id="loginForm">
+      <div class="f"><label>Օգտանուն</label><input name="user" autocomplete="username" placeholder="admin" required></div>
+      <div class="f"><label>Գաղտնաբառ</label><input name="pass" type="password" autocomplete="current-password" placeholder="••••••••" required></div>
+      <button class="btn btn-primary" type="submit">Մուտք գործել</button>
+      <div class="err" id="err"></div>
+    </form>
+    <div class="hint">Դեմո մուտք՝ <b>admin</b> / <b>kia2026</b></div>
+  </div>
+</div>
+<script src="admin.js"></script>
+<script>AdminAuth.initLogin();</script>
+</body>
+</html>

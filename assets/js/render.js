@@ -108,11 +108,12 @@ async function renderGallery(limit){
     grid.innerHTML=list.map((g,i)=>`
       <figure class="gal-item reveal" data-cat="${g.cat}" data-i="${i}">
         <div class="ph" style="--ar:${g.ar||'4/3'}">
-          <img loading="lazy" src="${svgPhoto(g.title,g.tag,i)}" alt="${g.title}">
+          <img loading="lazy" src="${g.img||svgPhoto(g.title,g.tag,i)}" alt="${g.title}"
+               onerror="this.onerror=null;this.src='${svgPhoto(g.title,g.tag,i)}'">
         </div>
         <figcaption class="ov"><span>${g.tag}</span><h4>${g.title}</h4></figcaption>
       </figure>`).join('');
-    const lbList=list.map((g,i)=>({type:'image',src:svgPhoto(g.title,g.tag,i),cap:g.title}));
+    const lbList=list.map((g,i)=>({type:'image',src:g.img||svgPhoto(g.title,g.tag,i),cap:g.title}));
     grid.querySelectorAll('.gal-item').forEach(el=>{
         el.addEventListener('click',()=>Lightbox.open(lbList,+el.dataset.i));
     });
@@ -161,7 +162,7 @@ async function renderReviews(){
         <div class="stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div>
         <p>“${r.text}”</p>
         <div class="who">
-          <div class="av">${r.name.charAt(0)}</div>
+          <div class="av">${r.photo?`<img loading="lazy" src="${r.photo}" alt="${r.name}" onerror="this.parentNode.textContent='${r.name.charAt(0)}'">`:r.name.charAt(0)}</div>
           <div style="text-align:left"><b>${r.name}</b><span>${r.car}</span></div>
         </div>
       </div></div>`).join('');
@@ -190,7 +191,7 @@ async function renderTeam(){
     const data=await loadJSON('data/specialists.json');
     grid.innerHTML=data.map((m,i)=>`
       <article class="member reveal ${'d'+(i%4+1)}">
-        <div class="avatar"><span class="init">${m.init}</span></div>
+        <div class="avatar"><span class="init">${m.init}</span>${m.photo?`<img loading="lazy" src="${m.photo}" alt="${m.name}" onerror="this.remove()">`:''}</div>
         <div class="info">
           <h4>${m.name}</h4>
           <div class="role">${m.role}</div>
